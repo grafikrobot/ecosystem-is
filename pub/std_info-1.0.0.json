@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://cplusplus.github.io/ecosystem-is/std_info-1.0.0.json",
+  "$id": "std_info-1.0.0.json",
   "title": "Tool Introspection Version 1.0.0 JSON Schema",
   "$defs": {
     "VersionMin": {

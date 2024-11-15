@@ -237,3 +237,6 @@ report/*.html
 
 # Build dirs
 /.build
+
+/ecosystem-is-*.*
+/pub/index.html

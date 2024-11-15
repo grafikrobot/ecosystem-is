@@ -20,15 +20,15 @@ jobs:
         run: sudo apt-get update
 
       - name: Install (APT)
-        run: sudo apt-get install latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern
+        run: sudo apt-get install latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern asciidoctor
 
       - name: Install (B2)
         run: |
           set -e
           pushd ..
-          wget "https://github.com/bfgroup/b2/archive/release.zip" -O b2.zip
+          wget "https://github.com/bfgroup/b2/archive/main.zip" -O b2.zip
           unzip b2.zip
-          cd b2-release
+          cd b2-main
           CXX= ./bootstrap.sh
           CXX= sudo ./b2 install b2-install-layout=portable --prefix=/usr/bin
           popd
