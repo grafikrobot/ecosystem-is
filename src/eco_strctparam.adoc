@@ -38,7 +38,7 @@ _application_ +[+ _std-strctparam-input_ _file_ +]+
 [.indented]
 --
 The pathname of a file to read the _structured parameters_ from.
-The option is specified as `--std-param=`__file__ or `-std-param:`__file__.
+The option is specified as ``--std-param=``__file__ or ``-std-param:``__file__.
 If __file__ is '`-`', the standard input shall be used.
 --
 
@@ -102,7 +102,7 @@ A _structured parameters object_ shall have only one of the
   The version field indicates the version of the _structured parameters_
   represented in the contents of the JSON text.
   If a _structured parameters object_ does not contain this field the
-  value shall be '1.0.0'.
+  value shall be `1.0.0`.
 
 [[strctparam.schema.args,([strctparam.schema.args])]]
 === Arguments Field [.right]#<<strctparam.schema.args,[strctparam.schema.args]>>#

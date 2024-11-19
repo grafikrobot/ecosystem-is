@@ -13,4 +13,4 @@ interface with, the [.Cpp]#{CPP}# programming language.
 (((C++)))
 [.Cpp]#{CPP}# is a general purpose programming language described in ISO/IEC 14882:2020
 [.doccite]#Programming languages --- {CPP}# (hereinafter referred to as the
-{CPP} standard).
+_{CPP} standard_).

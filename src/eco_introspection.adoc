@@ -251,12 +251,12 @@ version-min-number::
 version-max-number::
 	version-number
 version-range-min-bracket::
-	[.descr]#one of:#
-	[.ucode]#005B# [.uname]#LEFT SQUARE BRACKET#
+	[.descr]#one of:# +
+	[.ucode]#005B# [.uname]#LEFT SQUARE BRACKET# +
 	[.ucode]#0028# [.uname]#LEFT PARENTHESIS#
 version-range-max-bracket::
-	[.descr]#one of:#
-	[.ucode]#005D# [.uname]#RIGHT SQUARE BRACKET#
+	[.descr]#one of:# +
+	[.ucode]#005D# [.uname]#RIGHT SQUARE BRACKET# +
 	[.ucode]#0029# [.uname]#RIGHT PARENTHESIS#
 
 A version range is composed of either one version number bracketed,
