@@ -12,7 +12,7 @@ This clause describes options, output, and formats that control the behavior of
 applications through the specification of arguments and options from
 _structured parameters_.
 
-This clause specifies the ``std.strctparam`` capabilit
+This clause specifies the ``std.strctparam`` capability
  <<intspct.cap>> version `1.0.0`.
 
 An application can implement this capability.
