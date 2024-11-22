@@ -1,0 +1,147 @@
+%!TEX root = ecosystem.tex
+
+% Generated file. Do not edit.
+
+% Copyright 2024 René Ferdinand Rivera Morell
+% Creative Commons Attribution 4.0 International License (CC BY 4.0)
+
+
+% Structured Core Options JSON Schema
+\infannex{strctoptcorejschm}{Structured Core Options JSON Schema}
+
+% General
+\rSec1[strctoptcorejschm.general]{General}
+
+\pnum
+This Annex defines the structured parameter core options schema
+(\ref{strctopt.core}) in terms os a \emph{JSON Schema}
+(\ref{jsonschema}).
+
+\pnum
+This JSON Schema can be referenced as the \verb|$schema| field with URI value
+of \verb|"std_opt_core-1.0.0.json"|.
+
+% JSON Schema Specification
+\rSec1[strctoptcorejschm.spec]{JSON Schema Specification}
+
+
+\begin{lstlisting}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "std_opt_core-1.0.0",
+  "title": "Structured Core Options Version 1.0.0 JSON Schema",
+  "patternProperties": {
+    "source": { "$ref": "#/$defs/Std.Source" },
+    "output": { "$ref": "#/$defs/Std.Output" },
+    "include_dirs": { "$ref": "#/$defs/Std.IncludeDirs" },
+    "library_dirs": { "$ref": "#/$defs/Std.LibraryDirs" },
+    "define": { "$ref": "#/$defs/Std.Define" },
+    "undef": { "$ref": "#/$defs/Std.Undef" },
+    "optimization": { "$ref": "#/$defs/Std.Optimization" },
+    "vendor": { "$ref": "#/$defs/Std.Vendor" },
+    "language": { "$ref": "#/$defs/Std.Language" },
+    "kind": { "$ref": "#/$defs/Std.Kind" }
+  },
+  "$defs": {
+    "Std.Source": {
+      "description": "The source files to process.",
+      "type": "array",
+      "items": {
+        "description": "A file to process.",
+        "type": "object",
+        "patternProperties": {
+          "name": { "type": "string" },
+          "language": { "$ref": "#/$defs/Std.Language" },
+          "kind": { "$ref": "#/$defs/Std.Kind" },
+          "vendor": { "$ref": "#/$defs/Std.Vendor" }
+        },
+        "required": ["name"],
+        "additionalProperties": false
+      }
+    },
+    "Std.Output": {
+      "description": "The output files to generate.",
+      "type": "array",
+      "items": {
+        "description": "An output file.",
+        "type": "object",
+        "patternProperties": {
+          "name": { "type": "string" },
+          "kind": { "$ref": "#/$defs/Std.Kind" },
+          "vendor": { "$ref": "#/$defs/Std.Vendor" }
+        },
+        "required": ["name"],
+        "additionalProperties": false
+      }
+    },
+    "Std.IncludeDirs": {
+      "description": "Include directories.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "Std.LibraryDirs": {
+      "description": "Library directories.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "Std.Define": {
+      "description": "Define preprocessor symbols.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "patternProperties": {
+          "name": { "type": "string" },
+          "value": {
+            "type": ["number", "integer", "string", "boolean", "null"]
+          }
+        },
+        "required": ["name"],
+        "additionalProperties": false
+      }
+    },
+    "Std.Undef": {
+      "description": "Undefine preprocessor symbols.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "Std.Language": {
+      "description": "The language to interpret sources for.",
+      "type": "object",
+      "patternProperties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": ["name"]
+    },
+    "Std.Optimization": {
+      "description": "The optimizations to apply to different stages of the processing.",
+      "type": "object",
+      "patternProperties": {
+        "compile": {
+          "type": "string",
+          "enum": ["off", "minimal", "speed", "space", "debug"]
+        },
+        "link": {
+          "type": "boolean"
+        },
+        "vendor": { "$ref": "#/$defs/Std.Vendor" }
+      }
+    },
+    "Std.Vendor": {
+      "description": "Vendor defined specifications.",
+      "type": "object",
+      "patterProperties": {
+        "^[a-z]+$": {
+          "type": "object"
+        }
+      }
+    },
+    "Std.Kind": {
+      "description": "The kind of data a source of output is.",
+      "type": "string",
+      "enum": ["text", "exec", "object", "dynamic_lib", "archive_lib"]
+    }
+  }
+}
+\end{lstlisting}

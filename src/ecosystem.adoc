@@ -68,7 +68,7 @@ include::eco_conformance.adoc[leveloffset=+1]
 include::eco_defs.adoc[leveloffset=+1]
 include::eco_introspection.adoc[leveloffset=+1]
 include::eco_strctparam.adoc[leveloffset=+1]
-include::eco_strctparam_core.adoc[leveloffset=+1]
+include::eco_strctopt_core.adoc[leveloffset=+1]
 include::eco_diag.adoc[leveloffset=+1]
 
 //-------------------------------------------------------------------
@@ -77,6 +77,7 @@ include::eco_diag.adoc[leveloffset=+1]
 
 include::eco_introspection_annex.adoc[leveloffset=+1]
 include::eco_strctparam_annex.adoc[leveloffset=+1]
+include::eco_strctopt_core_annex.adoc[leveloffset=+1]
 
 //-------------------------------------------------------------------
 // Back matter..

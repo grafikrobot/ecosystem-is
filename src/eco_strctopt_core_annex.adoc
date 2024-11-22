@@ -1,0 +1,34 @@
+include::in_vars.adoc[]
+[.ignore]
+[[strctoptcorejschm.annex,([strctoptcorejschm.annex])]]
+= Annex C [.right]#<<strctoptcorejschm.annex,[strctoptcorejschm.annex]>>#
+:copyright: Copyright {docyear} René Ferdinand Rivera Morell
+:license: Creative Commons Attribution 4.0 International License (CC BY 4.0)
+
+:leveldedent: 1
+
+[.infannex]
+[.text-justify]
+[[strctoptcorejschm,([strctoptcorejschm])]]
+== Structured Core Options JSON Schema [.right]#<<strctoptcorejschm,[strctoptcorejschm]>>#
+
+
+[[strctoptcorejschm.general,([strctoptcorejschm.general])]]
+=== General [.right]#<<strctoptcorejschm.general,[strctoptcorejschm.general]>>#
+
+This Annex defines the structured parameter core options schema
+<<strctopt.core>> in terms os a _JSON Schema_
+<<jsonschema>>.
+
+This JSON Schema can be referenced as the \verb|$schema| field with URI value
+of `"std_opt_core-1.0.0.json"`.
+
+[[strctoptcorejschm.spec,([strctoptcorejschm.spec])]]
+=== JSON Schema Specification [.right]#<<strctoptcorejschm.spec,[strctoptcorejschm.spec]>>#
+
+[source,json]
+----
+include::../pub/std_opt_core-1.0.0.json[]
+----
+
+:leveldedent: 0
